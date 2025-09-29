@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: nyctaxi
+    database: NYCTAXI
+    schema: RAW
+    tables:
+      - name: YELLOW_TRIPS
+      - name: TAXI_ZONE_LOOKUP

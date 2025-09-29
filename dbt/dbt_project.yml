@@ -1,0 +1,9 @@
+name: nyctaxi_snowflake
+version: 1.0.0
+profile: nyctaxi_snowflake
+model-paths: ["models"]
+
+models:
+  nyctaxi_snowflake:
+    staging: { +materialized: view }
+    marts:   { +materialized: table }
