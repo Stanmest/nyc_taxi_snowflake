@@ -1,0 +1,18 @@
+version: 2
+
+exposures:
+  - name: nyc_taxi_daily_metrics
+    type: dashboard           
+    maturity: low
+    url: https://app.snowflake.com/        
+    description: >
+      Daily NYC Taxi KPIs backed by the fact_daily_metrics model
+      (trips, revenue, avg duration, avg miles, avg tip).
+
+    owner:
+      name: Stanley Mbah
+      email: stanmest77@gmail.com
+
+    depends_on:
+      - ref('fact_daily_metrics')          
+      - ref('stg_yellow_trips')            
