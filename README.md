@@ -22,14 +22,20 @@ Raw Parquet ➜ Snowflake **RAW** ➜ **ANALYTICS** views ➜ **dbt** models, te
 
 ## 🗺️ Architecture
 
-```mermaid
+```
 flowchart TD
-  A[NYC TLC Parquet (Yellow trips)] --> B[@YELLOW_STAGE (internal stage)]
-  B --> C[RAW.YELLOW_TRIPS (table)]
-  C --> D[ANALYTICS.V_DAILY_METRICS]
-  C --> E[ANALYTICS.V_DAILY_BY_PAYMENT]
-  C --> F[ANALYTICS.V_TOP_PU_ZONES]
-  C -. source .-> S[(dbt source)]
-  S --> T[dbt stg_yellow_trips (view)]
-  T --> M[dbt fact_daily_metrics (table)]
-  M --> X[((dbt Exposure: nyc_taxi_daily_metrics))]
+  A["NYC TLC Parquet (Yellow trips)"] --> B["@YELLOW_STAGE (internal stage)"]
+  B --> C["RAW.YELLOW_TRIPS (table)"]
+
+  C --> D["ANALYTICS.V_DAILY_METRICS (view)"]
+  C --> E["ANALYTICS.V_DAILY_BY_PAYMENT (view)"]
+  C --> F["ANALYTICS.V_TOP_PU_ZONES (view)"]
+
+  %% dbt lineage (optional, for docs)
+  C -. "dbt source" .-> S["nyctaxi.YELLOW_TRIPS"]
+  S --> T["stg_yellow_trips (dbt view)"]
+  T --> M["fact_daily_metrics (dbt table)"]
+  M --> X["Exposure: nyc_taxi_daily_metrics"]
+
+```
+
