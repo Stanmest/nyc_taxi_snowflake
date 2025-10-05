@@ -42,15 +42,15 @@ flowchart TD
 ## 📸 Screenshots
 
 **Stage files**
-![Stage list](assets/Image 25-09-2025 at 18.14.jpeg
+![Stage list](assets/stage_list.jpeg
 )
 
 **Monthly counts**
-![Monthly counts](assets/monthly_counts.png)
+![Monthly counts](assets/monthly_counts.jpeg)
 
 **dbt lineage — staging**
-![dbt lineage stg](assets/dbt_lineage_stg.png)
+![dbt lineage stg](assets/lineage_stg.jpeg)
 
 **dbt lineage — fact**
-![dbt lineage fact](assets/dbt_lineage_fact.png)
+![dbt lineage fact](assets/lineage_fact.JPG)
 
