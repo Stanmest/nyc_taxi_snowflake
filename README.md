@@ -39,3 +39,17 @@ flowchart TD
 
 ```
 
+## 📸 Screenshots
+
+**Stage files**
+![Stage list](assets/stage_list.png)
+
+**Monthly counts**
+![Monthly counts](assets/monthly_counts.png)
+
+**dbt lineage — staging**
+![dbt lineage stg](assets/dbt_lineage_stg.png)
+
+**dbt lineage — fact**
+![dbt lineage fact](assets/dbt_lineage_fact.png)
+
