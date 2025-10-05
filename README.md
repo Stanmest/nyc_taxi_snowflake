@@ -42,7 +42,8 @@ flowchart TD
 ## 📸 Screenshots
 
 **Stage files**
-![Stage list](assets/stage_list.png)
+![Stage list](assets/Image 25-09-2025 at 18.14.jpeg
+)
 
 **Monthly counts**
 ![Monthly counts](assets/monthly_counts.png)
